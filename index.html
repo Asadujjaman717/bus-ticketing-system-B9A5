@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Ticketing System</title>
+    <!-- tailwind and daisyUI -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!--css link -->
+    <link rel="stylesheet" href="styles/style.css">
+  </head>
+  <body class="">
+    <header class="mx-32">
+        <nav>
+            <div class="navbar bg-base-100">
+                <div class="navbar-start">
+                  <div class="dropdown">
+                    <div tabindex="0" role="button" class="all-btn all-btn-ghost lg:hidden">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                    </div>
+                    <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                      <li><a>Home</a></li>
+                      <li><a>About</a></li>
+                      <li><a>Destination</a></li>
+                      <li><a>Search</a></li>
+                    </ul>
+                  </div>
+                  <a class="all-btn all-btn-ghost text-xl font-bold">S.Alam Bus Services</a>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                  <ul class="menu menu-horizontal px-1">
+                    <li><a>Home</a></li>
+                      <li><a>About</a></li>
+                      <li><a>Destination</a></li>
+                      <li><a>Search</a></li>
+                  </ul>
+                </div>
+                <div class="navbar-end">
+                  <a class="all-btn bg-[#1DD10026] font-bold text-green-600">Bus <span><img src="images/bus-icon.png" alt=""></span></a>
+                </div>
+              </div>
+        </nav>
+        <div class="hero h-[600px] rounded-lg mt-8 relative" style="background-image: url(images/banner.png);">
+            <div class="hero-overlay bg-opacity-20"></div>
+            <div class="hero-content text-center text-neutral-content">
+              <div class="max-w-auto">
+                <h1 class="mb-5 text-5xl font-bold text-white">End-to-End Travel With</h1>
+                <h1 class="mb-5 text-5xl font-bold text-green-500">S.Alam Bus Services</h1>
+                <p class="mb-5">We can offer safe and affordable bus services through the country </p>
+                <button class="all-btn bg-green-500 font-bold border-none">Buy Tickets</button>
+              </div>
+            </div>
+          </div>
+          <div class="flex justify-center gap-3 relative">
+            <div class="flex absolute bottom-0.5 gap-2">
+                <div class="flex bg-white w-[200px] rounded-lg p-2 gap-1">
+                    <div>
+                        <img src="images/people.png" alt="">
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-2xl">500k+</h4>
+                        <p>Registered users</p>
+                    </div>
+                </div>
+                <div class="flex bg-white w-[200px] rounded-lg p-2 gap-2">
+                    <div>
+                        <img src="images/ticket-cupon.png" alt="">
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-2xl">1.7Lacks</h4>
+                        <p>Tickets sold</p>
+                    </div>
+                </div>
+                <div class="flex bg-white w-[200px] rounded-lg p-2 gap-2">
+                    <div>
+                        <img src="images/stoppage.png" alt="">
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-2xl">80k+</h4>
+                        <p>Rental Partners</p>
+                    </div>
+                </div>
+            </div>     
+        </div>
+    </header>
+    <main class="mx-32">
+        
+            <section class="best-offer-section mt-24">
+                <div class="flex gap-4 justify-center items-center">
+                    <div class="bg-yellow-600 w-1/2 rounded-lg flex justify-between items-center px-8">
+                        <div>
+                            <h3 class="text-2xl font-bold">15% OFF</h3>
+                            <p class="font-semibold">on your next purchase</p>
+                            <p>use by January 2024</p>
+                        </div>
+                        <div class="pl-8">
+                            <img src="images/cupon-devider.png" alt="">
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold">NEW15</h3>
+                            <p>Coupon Code</p>
+                        </div>
+                    </div>
+                    <div class="bg-pink-400 w-1/2 rounded-lg flex justify-between items-center px-8">
+                        <div>
+                            <h3 class="text-2xl font-bold">20% OFF</h3>
+                            <p class="font-semibold">on your next purchase</p>
+                            <p>use by January 2024</p>
+                        </div>
+                        <div class="pl-8">
+                            <img src="images/cupon-devider.png" alt="">
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold">Couple 20</h3>
+                            <p>Coupon Code</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-8">
+                    <button class="all-btn bg-white border-green-500 text-green-500 font-bold">See All Offers</button>
+                </div>     
+            </section>
+
+            <section class="mb-28">
+                <div class="text-center my-44">
+                    <h3 class="text-2xl font-bold">S.Alam Paribahan</h3>
+                <p>You can effort best bus trip with us.We offer luxurious bus trip all over the country</p>
+                </div>
+                <div class="flex justify-around items-center">
+                    <div class="w-3/4 ">
+                        <div class="flex justify-between items-center mb-8">
+                            <div class="flex gap-2">
+                                <div>
+                                    <img src="images/bus-logo.png" alt="">
+                                </div>
+                                <div>
+                                    <h3 class="text-2xl font-bold">S.alam Paribahan</h3>
+                                    <p>Coach-009-WEB ! AC_Business</p>
+                                </div>
+                            </div>
+                            <div class="p-1 rounded-md bg-[#1DD10033] flex w-[150px] h-14 items-center gap-2">
+                                <img src="images/seat-green.png" alt="">
+                                <p><span id="seatLeft">8 </span> Seats Left</p>
+                            </div>
+                        </div>
+                        <div class="bg-[#F7F8F8] p-4 rounded-md">
+                            <div class="flex justify-between p-2">
+                                <p>Route</p>
+                                <p>Dhaka-Sylhet</p>
+                            </div>
+                            <hr>
+                            <div class="flex justify-between p-2">
+                                <p>Departure time</p>
+                                <p>9PM</p>
+                            </div>
+                            <div class="flex items-center justify-center gap-2">
+                                <p class="bg-[#0307121A] rounded-md p-2">Boarding Point-Laxmipur</p>
+                                <p class="bg-[#0307121A] rounded-md p-2">Dropping Point-Bogura</p>
+                                <p class="bg-[#0307121A] rounded-md p-2">Est. time-11hrs</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <img src="images/info-devider.png" alt="">
+                    </div>
+                    <div class="">
+                        <img src="images/fare.png" alt="">
+                        <h3>550 Taka</h3>
+                        <p>Per Seat</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mb-24">
+                <div class="flex gap-5">
+                    <div class="w-[60%] border-r-4 border-dotted mx-2 px-4">
+                        <h3 class="pb-5 text-2xl font-bold">Select Your Seat</h3>
+                        <br>
+                        <div class="flex justify-between p-4 mr-2">
+                            <div class="flex gap-2">
+                                <img src="images/seat-gray.png" alt="">
+                                <p>Available</p>
+                            </div>
+                            <div class="flex gap-2">
+                                <img src="images/seat-green-filled.png" alt="">
+                                <p class="text-green-500">Selected</p>
+                            </div>
+                            
+                        </div>
+                        <br>
+                        
+                        <div class="flex items-end justify-end">
+                            <img src="images/Group 56.png" alt="">
+                        </div>
+
+                        <div class="grid grid-cols-5 gap-4 mt-5">
+                            <p>A</p>
+                            <p id="a1" class="btn all-btn">A1</p>
+                            <p id="a2" class="btn all-btn">A2</p>
+                            <p id="a3" class="btn all-btn">A3</p>
+                            <p id="a4" class="btn all-btn">A4</p>
+                            <p>B</p>
+                            <p id="b1" class="btn all-btn">B1</p>
+                            <p id="b2" class="btn all-btn">B2</p>
+                            <p id="b3" class="btn all-btn">B3</p>
+                            <p id="b4" class="btn all-btn">B4</p>
+                            
+                        </div>      
+                    </div>
+                    <div class="w-[40%] bg-[#F7F8F8] p-4">
+                        <h3 class="pb-5 text-2xl font-bold">Select Your Seat</h3>
+                        <br>
+                        <div>
+                            <div class="flex justify-around">
+                                <p>Seat <span class="bg-green-400 px-2 rounded-md" id="selectedSeat">0</span></p>
+                                <p>Class</p>
+                                <p>Price</p>
+                                
+                            </div>
+                            <br>
+                            <div id="selected-seat-container">
+
+                            </div>
+                        </div>
+                        <div class="flex justify-between mx-16 my-6 font-semibold">
+                            <p>Total Price</p>
+                            <p>BDT <span id="total-cost">0</span></p>
+                        </div>
+                        <div class="flex justify-center rounded-md">
+                            <input class="w-2/3 bg-[#FFFFFF] p-2" type="text" name="" id="coupon-code" placeholder="Have any coupons?">
+                            <button onclick="updateGrandTotal('apply-btn')" id="apply-btn" class="btn apply-btn bg-green-500 text-white">Apply</button>
+                        </div>
+                        <div class="flex justify-between mx-16 my-6 font-semibold">
+                            <p>Grand Total</p>
+                            <p>BDT <span id="grand-total">0</span></p>
+                        </div>
+
+                        <div class="flex flex-col gap-4">
+                            <label class="input input-bordered flex items-center gap-2">
+                                Passenger Name:
+                                <input type="text" class="grow" placeholder="Enter Your Name" required/>
+                              </label>
+                              <label class="input input-bordered flex items-center gap-2">
+                                Phone Number:
+                                <input type="number" class="grow" placeholder="Enter Your phone number" required/>
+                              </label>
+                              <label class="input input-bordered flex items-center gap-2">
+                                Email ID:
+                                <input type="email" class="grow" placeholder="Enter Your Email" />
+                              </label>
+                              <button id="" class="all-btn bg-green-500 text-white w-full">Next</button>
+                              <div class="flex justify-around underline">
+                                <a href="">Terms and Condition</a>
+                                <a href="">Cancellation Policy</a>
+                              </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+    </main>
+    
+        <footer class="bg-black text-white h-60">
+           <div class="flex justify-around items-center pt-16">
+                <div>
+                <h3 class="text-2xl font-bold">S.Alam Bus Ticket Services</h3>
+                <p>S.alam ticket is a digital platform to make easy purchase of bus tickets.</p>
+               </div>
+               <div>
+                <h4>Download Our Apps</h4>
+                <img src="images/Group 104.png" alt="">
+               </div>
+           </div>
+           <hr class="mx-32 my-6">
+           <p class="ml-52 text-gray-400">@All Rights reserved by S.Alam Poribahan 2024</p>
+        </footer>
+    
+    <script src="scripts/utility.js"></script>
+    <script src="scripts/ticket-system.js"></script>
+  </body>
+</html>
