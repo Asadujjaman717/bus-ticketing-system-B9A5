@@ -14,13 +14,13 @@
     <!--css link -->
     <link rel="stylesheet" href="styles/style.css">
   </head>
-  <body class="">
+  <body>
     <header class="mx-32">
         <nav>
             <div class="navbar bg-base-100">
                 <div class="navbar-start">
                   <div class="dropdown">
-                    <div tabindex="0" role="button" class="all-btn all-btn-ghost lg:hidden">
+                    <div tabindex="0" role="button" class="btn all-btn-ghost lg:hidden">
                       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                     </div>
                     <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
@@ -30,7 +30,7 @@
                       <li><a>Search</a></li>
                     </ul>
                   </div>
-                  <a class="all-btn all-btn-ghost text-xl font-bold">S.Alam Bus Services</a>
+                  <a class="all-btn-ghost text-xl font-bold">S.Alam Bus Services</a>
                 </div>
                 <div class="navbar-center hidden lg:flex">
                   <ul class="menu menu-horizontal px-1">
@@ -41,7 +41,7 @@
                   </ul>
                 </div>
                 <div class="navbar-end">
-                  <a class="all-btn bg-[#1DD10026] font-bold text-green-600">Bus <span><img src="images/bus-icon.png" alt=""></span></a>
+                  <a class="btn bg-[#1DD10026] font-bold text-green-600">Bus <span><img src="images/bus-icon.png" alt=""></span></a>
                 </div>
               </div>
         </nav>
@@ -52,7 +52,7 @@
                 <h1 class="mb-5 text-5xl font-bold text-white">End-to-End Travel With</h1>
                 <h1 class="mb-5 text-5xl font-bold text-green-500">S.Alam Bus Services</h1>
                 <p class="mb-5">We can offer safe and affordable bus services through the country </p>
-                <button class="all-btn bg-green-500 font-bold border-none">Buy Tickets</button>
+                <a class="btn bg-green-500 font-bold border-none" href="#section2">Buy Tickets</a>
               </div>
             </div>
           </div>
@@ -122,11 +122,11 @@
                     </div>
                 </div>
                 <div class="text-center mt-8">
-                    <button class="all-btn bg-white border-green-500 text-green-500 font-bold">See All Offers</button>
+                    <button class="btn bg-white border-green-500 text-green-500 font-bold">See All Offers</button>
                 </div>     
             </section>
 
-            <section class="mb-28">
+            <section id="section2" class=" mb-28 ">
                 <div class="text-center my-44">
                     <h3 class="text-2xl font-bold">S.Alam Paribahan</h3>
                 <p>You can effort best bus trip with us.We offer luxurious bus trip all over the country</p>
@@ -254,16 +254,39 @@
                                 Email ID:
                                 <input type="email" class="grow" placeholder="Enter Your Email" />
                               </label>
-                              <button id="" class="all-btn bg-green-500 text-white w-full">Next</button>
+                              <button onclick="my_modal_1.showModal()" id="next-btn"  class="btn bg-green-500 text-white w-full disabled" >Next</button>
                               <div class="flex justify-around underline">
                                 <a href="">Terms and Condition</a>
                                 <a href="">Cancellation Policy</a>
                               </div>
                         </div>
                     </div>
-
                 </div>
             </section>
+
+
+<!-- Open the modal using ID.showModal() method -->
+<!-- <button class="btn" onclick="my_modal_1.showModal()">open modal</button> -->
+<dialog id="my_modal_1" class="modal h-48">
+  <div class="modal-box flex flex-col justify-center items-center text-center">
+    <div>
+    <img class="h-12 w-12" src="images/success.png" alt="">
+    </div>
+    <div>
+    <h3 class="font-bold text-lg text-green-500">Success</h3> 
+    <p class=" font-semibold">Thank you for booking our bus seats.</p>
+    <p class=" font-semibold">We are working hard to find the best services and deals for you..</p>
+    <p>Shortly you will find a confirmation thorugh email.</p>
+    </div>
+    <!-- <p class="py-4">Press ESC key or click the button below to close</p> -->
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn bg-green-500 text-white font-semibold">Continue</button>
+      </form>
+    </div>
+  </div>
+</dialog>    
     </main>
     
         <footer class="bg-black text-white h-60">

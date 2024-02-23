@@ -3,11 +3,37 @@ const allBtn = document.getElementsByClassName("all-btn");
 for(const btns of allBtn){
     btns.addEventListener("click", function(event){
     const name = event.target.innerText;
-    console.log(name);
+    // console.log(name);
     const classes = 'Economy';
     const price = 550;
 
     const selectedContainer = document.getElementById("selected-seat-container");
+
+    // // disabled button after one click
+    event.target.setAttribute("disabled", false);
+    // // background filled with green
+    event.target.classList.add('bg-green-500');
+    
+    
+    
+    
+
+    // selected seat limit
+    const selectedSeatCount = getConvertedValue("selectedSeat");
+    if(selectedSeatCount + 1 > 4){
+        alert("You can purchase mostly 4tickets at a time!");
+        return;
+    }
+
+    
+
+    // update seat
+    const availableSeat = getConvertedValue("seatLeft");
+    document.getElementById("seatLeft").innerText = availableSeat - 1;
+    // selected seat
+    const selectedSeat = getConvertedValue("selectedSeat");
+    document.getElementById("selectedSeat").innerText = selectedSeat + 1;
+
 
     const div = document.createElement("div");
     div.classList.add("selected-seat");
@@ -31,9 +57,11 @@ for(const btns of allBtn){
     
 }
 
+
+
 function updateGrandTotal(status){
     const totalCost = getConvertedValue("total-cost");
-    
+
     if(status == undefined){
     document.getElementById("grand-total").innerText = totalCost;
     }
@@ -53,7 +81,6 @@ function updateGrandTotal(status){
         }
     }
 
-
     
 }
 
@@ -70,45 +97,23 @@ function getConvertedValue(id){
     return convertPrice;
 }
 
-// function seatSelected(){
-//     // background filled with green
-//     const element = document.getElementById('a1');
-//     element.classList.add('bg-green-500');
-    
-//     // available seat task
-//     const currentSeatElement = document.getElementById('seatLeft');
-//     const currentSeatText = currentSeatElement.innerText;
-//     const currentSeat = parseInt(currentSeatText);
-    
-//     // decrease the seat by 1
-//     const newSeat = currentSeat - 1;
-//     // Show the updated seat
-//     currentSeatElement.innerText = newSeat;
 
-//     // selected seat task
-//     // get current selected seat number 
-//     const currentSelectedSeat = document.getElementById('selectedSeat');
-//     const selectedSeatText = currentSelectedSeat.innerText;
-//     const selectedSeatNumber = parseInt(selectedSeatText);
-    
-//     // increase the seat by 1
-//     const selectedSeat = selectedSeatNumber + 1;
-//     // show the updated selected seat number
-//     currentSelectedSeat.innerText = selectedSeat;
-    
+document.addEventListener("DOMContentLoaded", function() {
+    const buttons = document.querySelectorAll(".all-btn");
+    let selectedTickets = 0;
+  
+    buttons.forEach(function(button) {
+      button.addEventListener("click", function() {
+        if (selectedTickets < 4) {
+          button.style.backgroundColor = "green";
+          button.style.color = "white"
+          button.setAttribute("disabled", "disabled"); 
+          selectedTickets++;
+          if (selectedTickets === 4) {
+            button.disabled = false;           
+          }
+        }
+      });
+    });
 
-// }
-// function handleClick(elementId) {
-//     button.disabled = true; // Disable the button
-//     button.removeEventListener("click", handleClick); // Remove the click event listener
-//   }
-
-  // Add event listener to the button
-//   button.addEventListener("click", handleClick);
-// });
-// function selectedSeatCount(){
-
-// }
-// function colorFilled(){
-
-// }
+  });
