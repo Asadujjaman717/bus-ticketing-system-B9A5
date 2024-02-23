@@ -9,10 +9,10 @@ for(const btns of allBtn){
 
     const selectedContainer = document.getElementById("selected-seat-container");
 
-    // // disabled button after one click
-    event.target.setAttribute("disabled", false);
-    // // background filled with green
-    event.target.classList.add('bg-green-500');
+    // // // disabled button after one click
+    // event.target.setAttribute("disabled", false);
+    // // // background filled with green
+    // event.target.classList.add('bg-green-500');
     
     
     
@@ -97,7 +97,7 @@ function getConvertedValue(id){
     return convertPrice;
 }
 
-
+// color button and disable clicked button
 document.addEventListener("DOMContentLoaded", function() {
     const buttons = document.querySelectorAll(".all-btn");
     let selectedTickets = 0;
@@ -117,3 +117,28 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
   });
+
+  //Get the next button enable when number typing in input field 
+  document.addEventListener("DOMContentLoaded", function() {
+    const numberInput = document.getElementById("numberInput");
+    const myButton = document.getElementById("next-btn");
+  
+    numberInput.addEventListener("input", function() {
+
+      const inputValue = parseInt(numberInput.value);
+      if (!isNaN(inputValue) && inputValue > 0) {
+        myButton.disabled = false;
+      } else {
+        myButton.disabled = true;
+      }
+    });
+  });
+  
+// hide apply container after one uses
+document.addEventListener("DOMContentLoaded", function(){
+    const applyButton = document.getElementById("apply-btn");
+    const sectionToHide = document.getElementById("apply-container");
+    applyButton.addEventListener("click", function() {
+        sectionToHide.style.display = "none"; 
+      });
+})
